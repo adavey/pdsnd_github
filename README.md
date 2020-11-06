@@ -5,7 +5,7 @@ November 6th, 2020
 Bikeshare Information
 
 ### Description
-Describe what your project is about and what it does
+This project will read bike share information from a csv file.  After the file is read it will report on various aspects of the data (i.e. most popular starting/ending station, longest rental duration, demographic/customer info, etc.).
 
 ### Files used
 Include the files used
