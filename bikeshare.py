@@ -204,25 +204,23 @@ def user_stats(df):
     for user_type, count in user_type_counts.items():
         print(f"Count of {user_type} is {count}.")
 
-
     # Display counts of gender
-    if 'Gender' in df.columns:
+    try:
         gender_counts = df['Gender'].value_counts()
         for gender, count in gender_counts.items():
             print(f"Count of {gender} is {count}.")
-    else:
+    except KeyError:
         print("This datafile does not contain any gender information.")
 
 
     # Display earliest, most recent, and most common year of birth
-    if 'Birth Year' in df.columns:
+    try:
         birth_filter = df[df['Birth Year'] > 0 ]['Birth Year'] # ignore records with no data
         print(f"Earliest year of birth:  {birth_filter.min()}")
         print(f"Most recent year of birth:  {birth_filter.max()}")
         print(f"Most common year of birth:  {int(birth_filter.mean())}")
-    else:
+    except KeyError:
         print("This datafile does not contain any birth information.")
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
