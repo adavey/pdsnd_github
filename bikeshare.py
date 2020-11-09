@@ -204,13 +204,12 @@ def user_stats(df):
     for user_type, count in user_type_counts.items():
         print(f"Count of {user_type} is {count}.")
 
-
     # Display counts of gender
-    if 'Gender' in df.columns:
+    try:
         gender_counts = df['Gender'].value_counts()
         for gender, count in gender_counts.items():
             print(f"Count of {gender} is {count}.")
-    else:
+    except KeyError:
         print("This datafile does not contain any gender information.")
 
 
