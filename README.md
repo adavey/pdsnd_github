@@ -14,5 +14,5 @@ This project will read bike share information from a csv file.  After the file i
 * washington.csv - bike share info for Washington
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+I used a combination of google search, stackoverflow and Python documentation when I ran into coding problems or I needed to research how a specific function worked in order to generate the requested output for the project.
 
